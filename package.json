@@ -1,0 +1,19 @@
+{
+  "name": "e-commerce-app",
+  "version": "1.0.0",
+  "description": "e-commerce by react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yussef-Makhlouf/e-commerce-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yussef-Makhlouf/e-commerce-app/issues"
+  },
+  "homepage": "https://github.com/Yussef-Makhlouf/e-commerce-app#readme"
+}
