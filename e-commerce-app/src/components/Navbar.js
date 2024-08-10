@@ -1,14 +1,25 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { useState } from 'react';
 
-export default function NavigationBar() {
+
+
+export default function NavigationBar({ onSearch }) {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (onSearch) {
+      onSearch(searchTerm);
+    }
+  };
+
   return (
     <header className="bg-light sticky-top border-bottom shadow-sm">
       <nav className="navbar navbar-expand-lg navbar-light container py-2">
-        <Link className="navbar-brand d-flex align-items-center" to="/home">
+        <Link className="navbar-brand d-flex align-items-center" to="/">
           <MountainIcon className="me-2" />
           <span className="d-none d-md-inline fs-4 fw-bold">E-commerce</span>
         </Link>
@@ -16,15 +27,22 @@ export default function NavigationBar() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <form className="d-flex ms-auto mb-3 mb-lg-0">
-            <input className="form-control me-2 rounded-pill border-secondary" type="search" placeholder="Search products..." aria-label="Search products" />
+          <form className="d-flex ms-auto mb-3 mb-lg-0" onSubmit={handleSearch}>
+            <input
+              className="form-control me-2 rounded-pill border-secondary"
+              type="search"
+              placeholder="Search products..."
+              aria-label="Search products"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
             <button className="btn btn-primary rounded-pill" type="submit">
               <i className="bi bi-search"></i>
             </button>
           </form>
           <ul className="navbar-nav ms-auto d-none d-lg-flex align-items-center gap-3">
             <li className="nav-item">
-              <Link className="nav-link text-dark" to="/home">Home</Link>
+              <Link className="nav-link text-dark" to="/">Home</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link text-dark" to="/shop">Shop</Link>
@@ -40,13 +58,13 @@ export default function NavigationBar() {
             <Link to="/cart" className="position-relative text-dark">
               <i className="bi bi-cart" style={{ fontSize: '1.5rem' }}></i>
               <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                3
+                ${}
               </span>
             </Link>
             <div className="dropdown">
               <button className="btn btn-secondary dropdown-toggle rounded-circle p-0" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                 <img
-                  src="/placeholder.svg"
+                  src="/assets/user.jpg"
                   width="32"
                   height="32"
                   className="rounded-circle"
