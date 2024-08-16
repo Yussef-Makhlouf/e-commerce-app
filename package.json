@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/Yussef-Makhlouf/e-commerce-app/issues"
   },
-  "homepage": "https://github.com/Yussef-Makhlouf/e-commerce-app#readme"
+  "homepage": "https://github.com/Yussef-Makhlouf/e-commerce-app#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.6.0",
+    "react-star-ratings": "^2.3.0"
+  }
 }
