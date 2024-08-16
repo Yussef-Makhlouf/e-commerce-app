@@ -1,0 +1,76 @@
+.card-hover {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  background-color: #f8f9fa; /* Light background for card body */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.card-title {
+  font-size: 1.25rem; /* Larger title font */
+  font-weight: bold; /* Bold title */
+}
+
+.card-text {
+  font-size: 0.9rem; /* Slightly larger text */
+  color: #6c757d; /* Muted text color */
+}
+
+.btn-outline-secondary {
+  border-color: #007bff; /* Custom border color */
+  color: #007bff; /* Custom text color */
+  transition: background-color 0.2s, color 0.2s; /* Smooth transition */
+}
+
+.btn-outline-secondary:hover {
+  background-color: #007bff; /* Change background on hover */
+  color: white; /* Change text color on hover */
+}
+
+.btn-danger {
+  transition: background-color 0.2s, color 0.2s; /* Smooth transition */
+}
+
+.btn-danger:hover {
+  background-color: #dc3545; /* Darker red on hover */
+  color: white; /* Change text color on hover */
+}
+.card-hover {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.quantity-input {
+  font-size: 1.2rem; /* Increase font size for better readability */
+  text-align: center; /* Center the text */
+  border: 1px solid #ced4da; /* Add a border */
+  border-radius: 0.25rem; /* Rounded corners */
+}
+
+.btn-outline-secondary {
+  transition: background-color 0.2s, color 0.2s; /* Smooth transition */
+}
+
+.btn-outline-secondary:hover {
+  background-color: #007bff; /* Change background on hover */
+  color: white; /* Change text color on hover */
+}
+
+.btn-danger {
+  transition: background-color 0.2s, color 0.2s; /* Smooth transition */
+}
+
+.btn-danger:hover {
+  background-color: #dc3545; /* Darker red on hover */
+  color: white; /* Change text color on hover */
+}

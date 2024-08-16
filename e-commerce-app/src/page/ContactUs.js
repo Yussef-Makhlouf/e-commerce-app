@@ -6,19 +6,19 @@ const ContactUs = () => {
       <div className="container mt-5">
         <div className="row">
           <div class="form-txt col-md-6 mt-5 ">
-            <h1>Contact Us</h1>
-            <span>
+            <h1 className="fs-1">Contact Us</h1>
+            <span className="fs-2">
               As you might expect of a company that began as a high-end
               interiors contractor, we pay strict attention.
             </span>
-            <h3>Egypt</h3>
-            <p>
+            <h3 className="mt-5">Egypt</h3>
+            <p className="fs-4">
               195 E Parker Square Dr, Parker, CO 801
               <br />
               +43 982-314-0958
             </p>
-            <h3>Palestine</h3>
-            <p>
+            <h3 className="mt-5">Palestine</h3>
+            <p className="fs-4">
              Khan Younis, Salahuddin street
               <br />
               0599322300
@@ -68,7 +68,7 @@ const ContactUs = () => {
                     required
                   ></textarea>
                 </div>
-                <button type="submit" className="btn btn-dark pb-3">
+                <button type="submit" className="btn btn-dark pb-3 fs-4 text-center ">
                   Submit
                 </button>
               </form>
