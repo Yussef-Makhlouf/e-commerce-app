@@ -1,0 +1,19 @@
+#adminProduct{
+    width: 100%;
+    display: flex;
+}
+#imgItem{
+    width: 30%;
+    height: 50px;
+}
+#nameItem{
+    width: 15%;
+    font-size: 14px;
+}
+#priceItem{
+    width: 15%;
+    font-size: 14px;
+}
+.crutBtnsDiv{
+    width: 40%;
+}
