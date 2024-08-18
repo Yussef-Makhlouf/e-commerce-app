@@ -13,7 +13,7 @@ import {
 import ProductPhoto from "./productPhoto"
 import { useSelector} from "react-redux";
 
-const allProducts = useSelector((state) => state.products.items);
+// const allProducts = useSelector((state) => state.products.items);
     function Dashboard(props) {
       const [products, setProducts] = useState([]);
       const [loading, setLoading] = useState(true);
@@ -120,7 +120,7 @@ const allProducts = useSelector((state) => state.products.items);
               </tr>
             </thead>
             <tbody>
-              {allProducts.map((product) => (
+              {products.map((product) => (
                 <tr key={product.id}>
                   
                   <td>{product.productName}</td>
