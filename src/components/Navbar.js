@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -8,14 +9,10 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 export default function NavigationBar({ isAuthenticated}) {
 
-
-  // const handleSearch = (e) => {
-  //   e.preventDefault();
-  //   if (onSearch) {
-  //     onSearch(searchTerm);
-  //   }
-  // };
-
+const user=JSON.parse(localStorage.getItem('currentUser'))
+const role= user.data?.user?.role 
+console.log(user.data?.user?.role)
+const name=user.data?.user?.fullName
   return (
     <header className="bg-light sticky-top border-bottom shadow-sm">
       <nav className="navbar navbar-expand-lg navbar-light container py-2">
@@ -67,17 +64,18 @@ export default function NavigationBar({ isAuthenticated}) {
                 favorite
               </Link>
             </li> 
-            <li className="nav-item">
+            {(isAuthenticated && role=== 'admin'  )? ( <li className="nav-item">
               <Link className="nav-link text-dark" to="/dashboard">
                 dashboard
               </Link>
-            </li> 
+            </li>) :""}
           </ul>
-          <div className="d-flex align-items-center gap-3 ms-3">
-            <Link to="/cart" className="position-relative text-dark">
-              <i className="bi bi-cart" style={{ fontSize: "1.5rem" }}></i>
-              <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                ${}
+          <div className="d-flex align-items-center gap-3 ms-3 ">
+            <Link to="/cart" className="position-relative text-dark ">
+              <i className="bi bi-cart " style={{ fontSize: "1.5rem" }}></i>
+              <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger ">
+                {localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")).length : 0}
+              
               </span>
             </Link>
             {isAuthenticated ? (
@@ -91,7 +89,9 @@ export default function NavigationBar({ isAuthenticated}) {
                     alt="Avatar"
                     style={{ objectFit: 'cover' }}
                   />
+                  
                 </button>
+                <span className="ms-2">{name}</span>
                 <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
                   <li><h6 className="dropdown-header">My Account</h6></li>
                   <li><Link className="dropdown-item" to="/profile">Profile</Link></li>

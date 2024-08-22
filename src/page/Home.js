@@ -19,7 +19,7 @@ export default function Home() {
               />
             </div>
             <div className="col-12 col-lg-6">
-              <h1 className="display-4 fw-bold mb-4" style={{ color: "#343a40" }}>Yussef Makhlouf Ali</h1>
+              <h1 className="display-4 fw-bold mb-4" style={{ color: "#343a40" }}>Welcome to E-Commerce </h1>
               <p className="text-muted fs-5 mb-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
